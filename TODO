@@ -1,3 +1,4 @@
+add apt-get update as a root node for configuration
 organize and cleanup the midas.pp script
 case out the os specific info in one place, although there is really only full support for Ubuntu, so probably just kill CentOS
 investigate keeping file contents we write out in an external file (cron and midas php config are cases)
