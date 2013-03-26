@@ -3,7 +3,16 @@
 
 This repository will house tools used to automate deployment, configuration, and management of midas instances and ecologies.
 
-Currently it only has a Puppet script used on Ubuntu 12.04 to set up a Midas instance, but in the future it might have bells and whistles aplenty.
+
+
+
+
+----
+## Installing midas on a Virtualbox VM with Vagrant and Puppet
+
+
+see the [wiki article](https://github.com/midasplatform/infrastructure/wiki/Testing-the-Puppet-manifest-locally-with-Vagrant)
+
 
 ----
 ## Ubuntu 12.04 server midas install with Puppet
