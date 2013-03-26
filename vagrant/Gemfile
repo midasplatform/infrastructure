@@ -1,0 +1,6 @@
+source :rubygems
+
+gem 'vagrant'
+gem 'veewee'
+gem 'librarian-puppet-maestrodev'
+gem 'puppet'
