@@ -143,12 +143,17 @@ file { "${sites_enabled_default}":
 
 
 
-class { 'mysql': }
+class { 'mysql':
+  require => Exec['apt-get update'],
+}
 class { 'mysql::php':
   require => Package['php5'],
   notify => Service['httpd'],
 }
-class { 'mysql::server': }
+class { 'mysql::server':
+  require => Exec['apt-get update'],
+}
+
 mysql::db { 'midas db':
   ensure   => present,
   user     => 'midas',
