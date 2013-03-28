@@ -9,7 +9,15 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
 
+GIT
+  remote: git://github.com/midasplatform/midas-puppet.git
+  ref: master
+  sha: 19c1704306fcee61fb04d0f80ed518c5a17b080c
+  specs:
+    midas ()
+
 DEPENDENCIES
+  midas (>= 0)
   puppetlabs/apache (>= 0)
   puppetlabs/mysql (>= 0)
   puppetlabs/stdlib (>= 0)
