@@ -3,3 +3,5 @@ forge "http://forge.puppetlabs.com"
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apache'
 mod 'puppetlabs/mysql'
+mod "midas",
+  :git => "git://github.com/midasplatform/midas-puppet.git"
