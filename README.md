@@ -16,23 +16,21 @@ see the [wiki article](https://github.com/midasplatform/infrastructure/wiki/Test
 
 ----
 ## Ubuntu 12.04 server midas install with Puppet
-1. Install Ruby (v 1.8.7)
 
-        sudo apt-get install ruby
+There are two bash scripts included in this repo.
 
-2. puppet from apt-get is 2.7.11, get the package from puppetlabs which is at least 3.1.1
-        
-        wget http://apt.puppetlabs.com/puppetlabs-release-precise.deb
-        sudo dpkg -i puppetlabs-release-precise.deb
-        sudo apt-get update
-        sudo apt-get install puppet
+`bootstrap.sh` will take an Ubuntu machine and add in the requirements in order to run puppet.
 
-3. install two puppet modules
-        
-        sudo puppet module install puppetlabs/apache
-        sudo puppet module install puppetlabs/mysql
+It will add in some package dependencies to get git and the right version of puppet, then will checkout this repository and the @midasplatform/midas-puppet repository.
 
-4. apply the midas puppet script    
-        
-        sudo puppet apply midas.pp
+`provision.sh` will run Puppet on the `instance.pp` manifest to make the server have the `midas` root as the server's docroot, and will make the server an ssl only webserver (port 80 is open but will redirect to 443).  It expects that `bootstrap.sh` has been run previously.
+
+
+Issues with this method:
+
+*`bootstrap.sh` installs this repository @midasplatform/infrastructure on the box, but `bootstrap.sh` is a part of this repository.  So `bootstrap.sh` must be copied onto the box.
+*It would be much better to have a clean image or ami that includes what `bootstrap.sh` accomplishes.
+
+
+
 
