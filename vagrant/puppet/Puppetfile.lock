@@ -1,7 +1,7 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apache (0.4.0)
+    puppetlabs/apache (0.6.0)
       puppetlabs/firewall (>= 0.0.4)
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/firewall (0.2.1)
@@ -12,13 +12,12 @@ FORGE
 GIT
   remote: git://github.com/midasplatform/midas-puppet.git
   ref: master
-  sha: 19c1704306fcee61fb04d0f80ed518c5a17b080c
+  sha: 1d389642a5d558712d13e251d825d615eea62c89
   specs:
     midas ()
+      puppetlabs/apache (>= 0.6.0)
+      puppetlabs/mysql (>= 0.6.1)
 
 DEPENDENCIES
   midas (>= 0)
-  puppetlabs/apache (>= 0)
-  puppetlabs/mysql (>= 0)
-  puppetlabs/stdlib (>= 0)
 
