@@ -8,14 +8,21 @@ This repository will house tools used to automate deployment, configuration, and
 
 
 ----
-## Installing midas on a Virtualbox VM with Vagrant and Puppet
+## Installing Midas on a Virtualbox VM with Vagrant and Puppet
 
 
 see the [wiki article](https://github.com/midasplatform/infrastructure/wiki/Testing-the-Puppet-manifest-locally-with-Vagrant)
 
+----
+## Installing Midas on an AWS EC2 Ubuntu instance with Puppet
+
+
+see the [wiki article](https://github.com/midasplatform/infrastructure/wiki/AWS)
 
 ----
 ## Ubuntu 12.04 server midas install with Puppet
+
+Assuming you already have an OS booted.
 
 There are two bash scripts included in this repo.
 
@@ -28,8 +35,8 @@ It will add in some package dependencies to get git and the right version of pup
 
 Issues with this method:
 
-*`bootstrap.sh` installs this repository @midasplatform/infrastructure on the box, but `bootstrap.sh` is a part of this repository.  So `bootstrap.sh` must be copied onto the box.
-*It would be much better to have a clean image or ami that includes what `bootstrap.sh` accomplishes.
+* `bootstrap.sh` installs this repository @midasplatform/infrastructure on the box, but `bootstrap.sh` is a part of this repository.  So `bootstrap.sh` must be copied onto the box.
+* It would be much better to have a clean image or ami that includes what `bootstrap.sh` accomplishes.
 
 
 
